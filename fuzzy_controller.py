@@ -45,3 +45,46 @@ plt.figure()
 fan_speed.view(sim=fan)
 plt.show()
 
+
+# DOne by gurdev
+
+
+# import numpy as np
+# def fuzzify_error(e):
+#     low = max(0, min(1, 1 - e))
+#     medium = max(0, min(1, 1 - abs(e - 0.5)/0.5))
+#     high = max(0, min(1, e))
+#     return np.array([low, medium, high])
+# def fuzzify_change(ec):
+#     neg = max(0, min(1, -ec))
+#     zero = max(0, min(1, 1 - abs(ec)))
+#     pos = max(0, min(1, ec))
+#     return np.array([neg, zero, pos])
+# def defuzzify(output):
+#     weights = np.array([-1, 0, 1])
+#     return np.dot(output, weights) / np.sum(output)
+# rules = np.array([
+# [0, -1, -1],
+# [0, 0, 0],
+# [0, 1, 1],
+# [1, -1, -1],
+# [1, 0, 0],
+# [1, 1, 1],
+# [2, -1, -1],
+# [2, 0, 0],
+# [2, 1, 1]
+# ])
+# error = 0.6
+# change = 0.2
+# e_membership = fuzzify_error(error)
+# ec_membership = fuzzify_change(change)
+# output_membership = np.zeros(3)
+# for rule in rules:
+#     e_idx, ec_idx, out_idx = rule
+#     firing_strength = min(e_membership[e_idx], ec_membership[ec_idx])
+#     output_membership[out_idx] = max(output_membership[out_idx], firing_strength)
+# control_signal = defuzzify(output_membership)
+# print("Error Membership:", e_membership)
+# print("Change Membership:", ec_membership)
+# print("Output Membership:", output_membership)
+# print("Control Signal:", control_signal)
