@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # Load dataset
-data = pd.read_csv('graduate_admission1.csv')
+data = pd.read_csv('Admission_Predict.csv')
 X = data.values
 
 # Step 1: Mean centering

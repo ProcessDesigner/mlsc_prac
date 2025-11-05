@@ -2,10 +2,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('data.csv')
+df = pd.read_csv('Admission_Predict.csv')
 
-X = df['gre'].values
-Y = df['toefl'].values
+X = df['GRE Score'].values
+Y = df['TOEFL Score'].values
 
 n = len(X)
 mx = sum(X)/n
